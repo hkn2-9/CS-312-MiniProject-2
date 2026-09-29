@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= drink.strDrink %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="result">
+    <h1><%= drink.strDrink %></h1>
+    <img src="<%= drink.strDrinkThumb %>" alt="<%= drink.strDrink %>">
+
+    <h2>Ingredients</h2>
+    <ul>
+      <% ingredients.forEach(item => { %>
+        <li><%= item %></li>
+      <% }); %>
+    </ul>
+
+    <h2>Instructions</h2>
+    <p><%= drink.strInstructions %></p>
+
+    <a href="/" class="button">Pick again</a>
+  </main>
+</body>
+</html>

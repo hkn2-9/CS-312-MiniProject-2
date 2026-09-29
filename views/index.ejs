@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RANDOM COCKTAIIL GENERATOR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>RANDOM COCKTAIL GENERATOR</h1>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+      
+    <form action="/pick" method="POST">
+      <label for="type">Are you 21 years of age</label>
+      <select name="type" id="type">
+        <option value="Alcoholic">21+</option>
+        <option value="Non_Alcoholic">Not 21</option>
+      </select>
+      <button type="submit">It's 5 o' clock somewhere!</button>
+    </form>
+  </main>
+</body>
+</html>
